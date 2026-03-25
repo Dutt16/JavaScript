@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>JavaScript Error Handling</h2>
+  <p id="wrong_id"></p>
+
+  <script>
+    try {
+      addalert("Iselin Middle School is a public school in NJ.");
+    } catch(err) { 
+      
+      document.getElementById("wrong_id").innerHTML = err.message;
+    }
+  </script>
+</body>
+</html>
