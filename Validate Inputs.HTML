@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+    
+    var ageValue = document.forms["myForm"]["fname"].value;
+    
+    if (ageValue == "" || parseInt(ageValue) < 18) {
+        alert("You are under the age of 18, you cannot submit this form.");
+        return false; 
+    }
+    return true; 
+}
+</script>
+</head>
+<body>
+    
+    <form name="myForm" onsubmit="return validateForm()">
+        Age: <input type="number" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+    <p id="message"></p>
+</body>
+</html>
