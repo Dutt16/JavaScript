@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Activity</title>
+</head>
+<body>
+
+  <h1 id="pageTitle">My Coding Project</h1>
+
+  <button onclick="displayTitle()">Get Title Values</button>
+
+  <p id="firstParagraph"></p>
+  <p id="secondParagraph"></p>
+
+  <script>
+    function displayTitle() {
+
+      var textValue = document.getElementById("pageTitle").innerHTML;
+
+      
+      document.getElementById("firstParagraph").innerHTML = textValue;
+      document.getElementById("secondParagraph").innerHTML = textValue;
+    }
+  </script>
+
+</body>
+</html>
