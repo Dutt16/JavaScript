@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>JavaScript: Objects and Arrays</h2>
+
+    <h3>Object Data (Keys)</h3>
+    <p id="obj_name"></p>
+    <p id="obj_age"></p>
+
+    <hr>
+
+    <h3>Array Data (Index & Methods)</h3>
+    <p><b>Full Array:</b> <span id="full_array"></span></p>
+    <p><b>Joined Array:</b> <span id="joined_array"></span></p>
+    <p><b>After Pop:</b> <span id="popped_array"></span></p>
+
+    <script>
+
+        var student = {
+            firstName: "Alex",
+            lastName: "Dutt",
+            age: 15
+        };
+        document.getElementById("obj_name").innerHTML = "Name: " + student.firstName + " " + student.lastName;
+        document.getElementById("obj_age").innerHTML = "Age: " + student.age;
+
+        var subjects = ["Math", "Science", "Coding", "English"];
+        
+        document.getElementById("full_array").innerHTML = subjects[2];
+
+        document.getElementById("joined_array").innerHTML = subjects.join(" - ");
+
+        subjects.pop();
+        document.getElementById("popped_array").innerHTML = subjects;
+    </script>
+
+</body>
+</html>
