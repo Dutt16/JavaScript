@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Today Calendar</title>
+</head>
+<body>
+
+    <div id="MyCalendarDisplay"></div>
+
+    <script>
+        function showCalendar() {
+            var date = new Date();
+            
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            
+            var dayName = days[date.getDay()];
+            var monthName = months[date.getMonth()];
+            var dayNum = date.getDate();
+            var year = date.getFullYear();
+
+            var calendar = dayName + ", " + monthName + " " + dayNum + ", " + year;
+
+            document.getElementById("MyCalendarDisplay").innerText = calendar;
+
+            setTimeout(showCalendar, 1000 * 60 * 60); 
+        }
+
+        showCalendar();
+    </script>
+
+</body>
+</html>
