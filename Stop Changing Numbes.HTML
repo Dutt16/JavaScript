@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div>Click on the dice...</div>
+    <button id="button" onclick="stopStart()">ClickMe!</button>
+    <div id="dice"></div>
+
+    <script>
+        var diceElement = document.getElementById("dice");
+        var stopped = false;
+        var currentNumber;
+        var t;
+
+        function change() {
+            currentNumber = Math.floor(Math.random() * 10) + 1;
+            diceElement.innerHTML = currentNumber;
+        }
+
+        function stopStart() {
+            if (!stopped) {
+                
+                if (currentNumber % 2 !== 0) {
+                    clearInterval(t);
+                    stopped = true;
+                }
+            } else {
+               
+                t = setInterval(change, 100);
+                stopped = false;
+            }
+        }
+
+        window.onload = function() {
+            t = setInterval(change, 100);
+        }
+    </script>
+</body>
+</html>
